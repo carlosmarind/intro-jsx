@@ -1,76 +1,91 @@
-import React from "https://esm.sh/react@18.2.0";
-import ReactDOM from "https://esm.sh/react-dom@18.2.0/client";
+// Componente Header
+function Header() {
+    return (
+        <header>
+            <h1>Bienvenido a Mi Sitio Web</h1>
+            <p className="subtitle">Una página de ejemplo creada con HTML y CSS</p>
+        </header>
+    );
+}
 
-const Header = () => {
-    return React.createElement("header", null,
-        React.createElement("h1", null, "Bienvenido a Mi Sitio Web"),
-        React.createElement("p", { className: "subtitle" }, "Una página de ejemplo creada con HTML y CSS")
+function Footer() {
+    return (
+        <footer>
+            <p className="footer-text">© 2025 Mi Sitio Web. Página creada con React y JSX.</p>
+        </footer>
+    );
+}
+const App = () => {
+    return (
+        <div>
+            {/* Header */}
+            <Header />
+            
+            {/* Content */}
+            <div className="content">
+                {/* Main Content */}
+                <main className="main-content">
+                    <h2>Contenido Principal</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.{" "}
+                        <span className="highlight">Ut enim ad minim veniam</span>, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+
+                    <h3>Características Destacadas</h3>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+
+                    <div className="card">
+                        <h3>Sección Especial</h3>
+                        <p>
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem.
+                        </p>
+                    </div>
+                </main>
+
+                {/* Sidebar */}
+                <aside className="sidebar">
+                    <h3>Información Adicional</h3>
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti.
+                    </p>
+
+                    <h3>Lista de Elementos</h3>
+                    <ul>
+                        <li>Primer elemento importante</li>
+                        <li>Segundo elemento relevante</li>
+                        <li>Tercer elemento destacado</li>
+                        <li>Cuarto elemento esencial</li>
+                    </ul>
+
+                    <div className="card">
+                        <h3>Dato Curioso</h3>
+                        <p>
+                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+                            maxime placeat.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            {/* Footer */}
+            <Footer />
+        </div>
     )
 }
 
-const Footer = () => {
-    return React.createElement("footer", null,
-        React.createElement("p", { className: "footer-text" },
-            "© 2025 Mi Sitio Web. Página creada con HTML puro y CSS."
-        )
-    )
-}
-
-const App = () =>
-    React.createElement("div", { className: "container" },
-        // Header
-        Header(),
-        // Content
-        React.createElement("div", { className: "content" },
-            // Main Content
-            React.createElement("main", { className: "main-content" },
-                React.createElement("h2", null, "Contenido Principal"),
-                React.createElement("p", null,
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-                    React.createElement("span", { className: "highlight" }, "Ut enim ad minim veniam"),
-                    ", quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                ),
-                React.createElement("p", null,
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                ),
-                React.createElement("h3", null, "Características Destacadas"),
-                React.createElement("p", null,
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-                ),
-                React.createElement("div", { className: "card" },
-                    React.createElement("h3", null, "Sección Especial"),
-                    React.createElement("p", null,
-                        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-                    )
-                )
-            ),
-
-            // Sidebar
-            React.createElement("aside", { className: "sidebar" },
-                React.createElement("h3", null, "Información Adicional"),
-                React.createElement("p", null,
-                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
-                ),
-                React.createElement("h3", null, "Lista de Elementos"),
-                React.createElement("ul", null,
-                    React.createElement("li", null, "Primer elemento importante"),
-                    React.createElement("li", null, "Segundo elemento relevante"),
-                    React.createElement("li", null, "Tercer elemento destacado"),
-                    React.createElement("li", null, "Cuarto elemento esencial")
-                ),
-                React.createElement("div", { className: "card" },
-                    React.createElement("h3", null, "Dato Curioso"),
-                    React.createElement("p", null,
-                        "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat."
-                    )
-                )
-            )
-        ),
-        // Footer
-        Footer(),
-    )
-
-// Render en el root
-const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement);
-root.render(React.createElement(App));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
