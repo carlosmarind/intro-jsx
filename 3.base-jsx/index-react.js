@@ -15,12 +15,13 @@ function Footer() {
         </footer>
     );
 }
+
 const App = () => {
     return (
         <div>
             {/* Header */}
             <Header />
-            
+
             {/* Content */}
             <div className="content">
                 {/* Main Content */}
